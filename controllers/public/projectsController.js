@@ -3,11 +3,8 @@ const catchAsync = require('../../utils/catchAsync');
 const{Projects,Projecttext}=require("../../models")
 
 exports.getAllProjects=catchAsync(async(req,res,next)=>{
-    const limit=req.query.limit || 20;
-    const offset=req.query.offset || 0
     const projects=await Projects.findAndCountAll({
         order:[["id","DESC"]],
-        limit,offset
     })
     const projecttext=await Projecttext.findOne()
     return res.send({projects,projecttext})

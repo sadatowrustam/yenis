@@ -6,7 +6,7 @@ const { News,Images } = require('../../models');
 exports.getAllNews=catchAsync(async(req,res,next)=>{
     const limit=req.query.limit || 20
     const offset=req.query.offset || 0
-    const news=await News.findAll({
+    const news=await News.findAndCountAll({
         order:[["updatedAt","DESC"]],
         limit,
         offset,
