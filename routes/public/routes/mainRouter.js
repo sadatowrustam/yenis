@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router()
-const { getMainpage } = require('../../../controllers/public/mainControllers');
+const { getMainpage,addOne,getStatisctics } = require('../../../controllers/public/mainControllers');
 router.get("/", getMainpage)
+router.post("/add-one", addOne)
+router.get("/statistics", getStatisctics)
+
 module.exports = router;
