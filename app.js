@@ -21,6 +21,8 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(`${__dirname}/static`));
 app.use(fileupload())
+
+app.get("/news",)
 app.use('/admin', require('./routes/admin/adminRouter'));
 app.use('/public', require('./routes/public/publicRouter'));
 

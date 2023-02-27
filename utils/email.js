@@ -11,7 +11,7 @@ exports.sendEmail = async(options) => {
     });
     const mailOptions = {
         from: 'rustamsadatov0@gmail.com',
-        to: 'hydyrowayhan7@gmail.com',
+        to: 'taslama@yenishyoly.com',
         subject: 'Biri "Yenish yoly " administratsiýasy bilen habarlaşmak isleýär',
         text: `ADY: ${options.name},\n\n EMAIL: ${options.email}, \n,\n\nHATY: ${options.text}`,
     };
